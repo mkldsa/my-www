@@ -100,13 +100,16 @@ $(document).ready(function () {
 
         var imgSrc = $(this).attr('href');
         console.log(imgSrc);
+        
+        var desc = $(this).data('desc')
+
         /* imgSrc 는 보이는 썸네일을 클릭했을때 attr 메서드로 href 속성을 변수에 부여함, 
         href 는 a 링크 태그. */
 
         $('#black').show();
         /* black을 display:none 으로 초기설정을 했기 때문에 show 메서드로 화면에 보여줌 */
 
-        $('#big').html('<img src=" ' + imgSrc + ' " alt="">');
+        $('#big').html('<img src=" ' + imgSrc + ' " alt="">' + '<div id="b-txt"><p>' + desc + '</p></div>');
         /* a.modal을 클릭했을때 #black을 화면에 보여주면서 #big에 html태그로 img src 속성을 추가하며 변수에 담겨있던 href 로 a 태그의 href에 부여된 이미지를 보여줌 */
     });
 
