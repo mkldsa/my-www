@@ -145,7 +145,7 @@ $(document).ready(function () {
 
         scR = true;
 
-        var targetScroll = 2400; // 절대 위치로 설정
+        var targetScroll = 2500; // 절대 위치로 설정
 
         $('html, body').animate({
             scrollTop: targetScroll
