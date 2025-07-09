@@ -1,0 +1,403 @@
+@charset "utf-8";
+
+body {
+    background-color: rgb(122, 122, 122);
+}
+
+
+header {
+    /* background-color: rgb(122, 122, 122); */
+    position: fixed;
+    z-index: 9999;
+
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+}
+
+header .menu {
+    float: right;
+}
+
+header .menu ul {}
+
+header .menu ul li {
+    font-size: 20px;
+    font-weight: 200;
+    float: left;
+    margin-left: 30px;
+}
+
+
+/* --------------------------------------main-------------------------- */
+
+main {
+    width: 100%;
+    height: 950px;
+
+    position: relative;
+
+    /* 아래에서 위로 슬라이드 */
+    background-image: url(../img/Untitled-1.png);
+    background-repeat: no-repeat;
+    /* outline: 2px solid white; */
+
+    opacity: 0;
+    transition: all 1.5s ease-in;
+}
+
+main .m-content {
+    /* outline: 2px solid white; */
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 70%;
+}
+
+main .m-name {
+    display: block;
+    float: left;
+    padding: 0 20px 0 200px;
+
+    opacity: 0;
+    transition: all 1.5s ease-in;
+}
+
+main .m-name img {}
+
+main .m-port {
+    display: block;
+    float: right;
+    padding-right: 150px;
+
+    opacity: 0;
+    transition: all 1.5s ease-in;
+}
+
+main .port img {}
+
+/* ---------------------------------------section-------------------------- */
+
+.web {
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 100px;
+    /* outline: 2px solid white; */
+}
+
+.web .w-content {
+    position: relative;
+    /* w-txt 기준 */
+    height: 600px;
+    /* outline: 2px solid ; */
+    margin-top: 150px;
+}
+
+.web .w-content h2 {
+    font-size: 45px;
+    text-shadow: 2px 2px 2px rgb(90, 90, 90);
+    /* outline: 2px solid crimson; */
+}
+
+.web .w-content p {
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 20px;
+    text-shadow: 2px 2px 2px rgb(90, 90, 90);
+}
+
+.web .w-content .w-img {
+    width: 60%;
+    margin-top: 30px;
+}
+
+.web .w-content .w-img img {
+    border: 2px solid white;
+    border-radius: 30px;
+    margin-top: 30px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.web .w-content .w-txt {
+    float: right;
+    width: 40%;
+    margin-top: 30px;
+    /* outline: 2px solid crimson; */
+
+    position: absolute;
+    right: 0;
+}
+
+.web .w-content .w-txt h3 {
+    font-size: 32px;
+    text-shadow: 2px 2px 2px rgb(90, 90, 90);
+}
+
+.web .w-content .w-txt p {
+    font-size: 18px;
+    font-weight: 200;
+    word-break: keep-all;
+    margin-bottom: 50px;
+}
+
+.web .w-content .w-txt a {
+    font-size: 20px;
+    font-weight: 500;
+
+    border: 3px solid white;
+    border-radius: 10px;
+
+    padding: 6px;
+}
+
+.web .w-content .w-txt a:hover {
+    background-color: white;
+    color: rgb(122, 122, 122);
+}
+
+
+/* ---------------------------------------about-------------------------- */
+
+.port {
+    width: 100%;
+    height: 650px;
+    text-align: center;
+    /* outline: 2px solid white; */
+    margin-top: 100px;
+
+    overflow: hidden;
+}
+
+.port .p-content p {
+    font-size: 28px;
+    font-weight: 400;
+    text-shadow: 2px 2px 2px rgb(90, 90, 90);
+}
+
+/* ---------------------------------------viewer-------------------------- */
+
+.port {
+    width: 100%;
+    /* width: 80%; */
+
+    margin: 100px auto;
+
+    position: relative;
+    /* .menu-btn의 기준! */
+
+    overflow: hidden;
+    /* background-color: bisque; */
+}
+
+
+.p-content .viewer {
+    width: 33.33%;
+    margin: 0 auto;
+    height: auto;
+
+    position: relative;
+}
+
+.p-content .viewer .box-wrap {
+    position: relative;
+    left: 0;
+
+}
+
+.p-content .viewer .box-wrap li {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    transition: all 1s ease-in-out;
+}
+
+.p-content .viewer .box-wrap .cb1 {
+    left: -190%;
+    transform: scale(0.8);
+    opacity: 0.1;
+}
+
+.p-content .viewer .box-wrap .cb2 {
+    left: -100%;
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+.p-content .viewer .box-wrap .cb3 {
+    left: 0;
+    transform: scale(1);
+}
+
+.p-content .viewer .box-wrap .cb4 {
+    left: 100%;
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+.p-content .viewer .box-wrap .cb5 {
+    left: 190%;
+    transform: scale(0.8);
+    opacity: 0.1;
+}
+
+.p-content .viewer .box-wrap .cb6 {
+    left: 280%;
+    transform: scale(0.8);
+    opacity: 0.1;
+}
+
+.p-content .viewer .box-wrap li .img-box {
+    width: 400px;
+    margin: 0 auto 30px;
+}
+
+.p-content .viewer .box-wrap .cb1 .img-box img {
+    margin-top: 40px;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.p-content .viewer .box-wrap .cb2 .img-box img {
+    margin-top: 40px;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.p-content .viewer .box-wrap .cb3 .img-box img {
+    margin-top: 40px;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.p-content .viewer .box-wrap .cb4 .img-box img {
+    margin-top: 40px;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.p-content .viewer .box-wrap .cb5 .img-box img {
+    margin-top: 40px;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.p-content .viewer .box-wrap .cb6 .img-box img {
+    margin-top: 40px;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.port .menu-btn {
+    /* outline: 2px solid blue; */
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* bottom: 0; */
+    top: 266px;
+
+    width: 23.33%;
+}
+
+.port .menu-btn img {
+    width: 50px;
+    display: block;
+    cursor: pointer;
+}
+
+.port .menu-btn img.btn-prev {
+    float: left;
+}
+
+.port .menu-btn img.btn-next {
+    float: right;
+}
+
+#black {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+
+    display: none;
+}
+
+#big {
+    height: 50%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    /* display: none; */
+}
+
+#big img {
+    height: 100%;
+    display: block;
+}
+
+
+/* ---------------------------------------port-------------------------- */
+
+.contact {
+    width: 100%;
+    height: 700px;
+    text-align: center;
+    /* outline: 2px solid white; */
+    margin-top: 100px;
+}
+
+.contact .c-txt {
+    margin-top: 100px;
+}
+
+.contact .c-txt h2 {
+    font-size: 45px;
+    text-shadow: 2px 2px 2px rgb(90, 90, 90);
+}
+
+.contact .c-txt ul {
+    margin-top: 50px;
+}
+.contact .c-txt ul li {
+    margin-top: 50px;
+}
+.contact .c-txt ul li img {
+}
+.contact .c-txt ul li p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 200;
+    text-shadow: 2px 2px 2px rgb(90, 90, 90);
+}
+
+/* ---------------------------------------contact-------------------------- */
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: black;
+}
+
+footer div {}
+
+footer div p {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 20px;
+    font-weight: 400;
+}
